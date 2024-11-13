@@ -1,1 +1,53 @@
-<p>converter works!</p>
+<div
+  class="container mx-auto pt-8 w-full h-screen flex justify-center items-center bg-pink-400"
+>
+  <form
+    class="bg-white py-12 px-4 sm:p-12 m-4 rounded-lg flex flex-col items-center myform"
+    [formGroup]="exchangeForm"
+  >
+    <h1 class="font-bold text-3xl mb-8">Currency Converter</h1>
+    <mat-form-field class="w-full h-24">
+      <mat-label>Enter Amount</mat-label>
+      <input formControlName="amount" matInput />
+    </mat-form-field>
+    <div
+      class="select w-full mt-6 flex flex-col sm:flex-row justify-between items-center"
+    >
+      <mat-form-field class="select-btn h-24">
+        <mat-label>From</mat-label>
+        <mat-select formControlName="from">
+          @for (code of currencyCode; track $index) {
+          <mat-option value="{{ code }}"
+            >{{ code }} - {{ currencyName[$index] }}
+          </mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <span class="mx-4">
+        <fa-icon [icon]="faArrowRightLeft"></fa-icon>
+      </span>
+      <mat-form-field class="select-btn h-24">
+        <mat-label>To</mat-label>
+        <mat-select formControlName="to">
+          @for (code of currencyCode; track $index) {
+          <mat-option value="{{ code }}"
+            >{{ code }} - {{ currencyName[$index] }}
+          </mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <p class="my-4 mb-8 text-2xl">
+      {{ myamount | currency : myFrom }} =
+      {{ exchangedAmount | currency : myTo }}
+    </p>
+
+    <div
+      class="example-button-container flex justify-center font-bold text-lg sm:text-5xl"
+    >
+      <a mat-fab extended routerLink="." (click)="convert()">
+        Get Exchange Rate
+      </a>
+    </div>
+  </form>
+</div>

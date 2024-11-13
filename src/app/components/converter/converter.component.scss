@@ -1,0 +1,38 @@
+.input {
+  background-color: white;
+}
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  a {
+    font-size: 2rem;
+    padding: 3rem;
+    width: 100%;
+  }
+}
+.myform {
+  min-width: 700px;
+}
+.select-btn {
+  min-width: 275px;
+}
+@media screen and (max-width: 500px) {
+  .myform {
+    min-width: 450px;
+    .example-button-container {
+      a {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  .select-btn {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .myform {
+    min-width: 310px;
+  }
+}
