@@ -9,7 +9,7 @@ import { Rate } from '../interface/rate';
   providedIn: 'root',
 })
 export class ConvertService {
-  private ApiUrl = environment.apiUrl;
+  private ApiUrl = `https://api.exchangeratesapi.io/v1/symbols?access_key=${environment.apikeySymbols}`;
 
   constructor(private http: HttpClient) {}
 
