@@ -1,27 +1,43 @@
-# CurrencyConverter
+# Currency Converter Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.2.
+This Currency Converter application is built using Angular to provide a simple and user-friendly interface for converting currencies based on predefined exchange rates. The application uses Angular forms for inputting currency values and selecting conversion rates, Angular services for fetching currency exchange data from APIs (e.g., ExchangeRate-API), and Angular pipes for formatting converted currency values.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Convert currency values between different currencies.
+- Fetch live exchange rates from ExchangeRate-API.
+- User-friendly interface with Angular Material.
+- Real-time conversion as the user types.
 
-## Code scaffolding
+## Technologies Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular
+- Angular Material
+- Tailwind CSS
+- ExchangeRate-API
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Prerequisites
 
-## Running unit tests
+- Node.js and npm installed on your machine
+- Angular CLI installed globally (`npm install -g @angular/cli`)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Installation
 
-## Running end-to-end tests
+1. Clone the repository:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ```bash
+   git clone https://github.com/G-Gakii/currencyConverter.git
 
-## Further help
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+2. Navigate to the project directory:
+   cd currency converter
+
+3. Install the dependencies:
+   npm install
+
+   ### Running the Application
+
+   ng serve
